@@ -1,0 +1,16 @@
+name: ej1
+
+on: push
+
+jobs:
+  probar:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: bajar_codigo
+        uses: actions/checkout@v7
+      - name: installar_pytests
+        run: pip install pytest
+      - name: correrse_pytest
+        run: pytest test.py
+    
